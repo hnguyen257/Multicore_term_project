@@ -1,0 +1,11 @@
+#Ignore Everything
+*
+
+#Keep Code Files
+!.gitignore
+!main.cpp
+!linear_system.cpp
+!invert.cpp
+!determinant.cpp
+!lu_factorization.cpp
+!README.md
