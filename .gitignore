@@ -3,9 +3,6 @@
 
 #Keep Code Files
 !.gitignore
-!main.cpp
-!linear_system.cpp
-!invert.cpp
-!determinant.cpp
-!lu_factorization.cpp
+!*.cpp
+!*.h
 !README.md
