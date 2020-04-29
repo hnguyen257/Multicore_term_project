@@ -33,6 +33,4 @@ int main()
 	test[3][2] = 3;
 	test[3][3] = 3;
 	test[3][4] = 9;
-	gauss_jordan(test, 4, 4, 5);
-	int i = 0;
 }
