@@ -1,6 +1,8 @@
 #include <iostream>
 #include <omp.h>
 #include "determinant.h"
+#include "invert.h"
+#include "linear_system.h"
 
 using namespace std;
 
@@ -33,4 +35,9 @@ int main()
 	test[3][2] = 3;
 	test[3][3] = 3;
 	test[3][4] = 9;
+
+	double** test1 = linear_system(test, 4, 4);
+	double** test2 = invert(test, 4);
+	double test3 = determinant(test, 4);
+	cout << "Done!" << endl;
 }

@@ -2,6 +2,12 @@
 
 void gauss_jordan(double** input, int m, int n, int aug_n)
 {
+	gauss(input, m, n, aug_n);
+	jordan(input, m, n, aug_n);
+}
+
+void gauss(double** input, int m, int n, int aug_n)
+{
 	for (int i = 0; i < m; i++)
 	{
 		int first_nonzero = swap_down(input, m, n, i);
@@ -11,11 +17,14 @@ void gauss_jordan(double** input, int m, int n, int aug_n)
 		}
 		zero_down(input, m, aug_n, i, first_nonzero);
 	}
+}
+
+void jordan(double** input, int m, int n, int aug_n)
+{
 	for (int i = m - 1; i >= 0; i--)
 	{
 		one_here_zero_up(input, m, n, aug_n, i);
 	}
-
 }
 
 int swap_down(double** input, int m, int n, int row)
